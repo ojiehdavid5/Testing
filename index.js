@@ -1,4 +1,44 @@
-console.log('hello');
+const axios=require('axios');
+
+//Get
+// [axios.get('https://reqres.in/api/users?page=2')
+// .then((res)=>console.log(res))
+// .catch((err)=>console.log(err));
+
+// function handleResult(data){
+//     console.log(data);
+// }
+
+//POST
+// axios.post('https://reqres.in/api/users',[{
+
+// name:'chuks',
+// job:'Developer',
+// },{
+
+//     name:'chuks',
+//     job:'Developer'}])
+// .then((res)=>console.log(res))
+// .catch((err)=>console.log(err));
+
+//PUT
+axios.put('https://reqres.in/api/users/3',[{
+
+name:'chuks',
+job:'Developer',
+},])
+.then((res)=>console.log(res))
+.catch((err)=>console.log(err));
+
+
+
+
+
+
+// require('dotenv').config()
+
+// console.log(process.env.SECRET_KEY);
+// console.log('hello');
 
 // const person ={
 //     age:23,
@@ -47,9 +87,9 @@ console.log('hello');
 //  let fruits = ['apple', 'banana', 'orange']; 
 //  fruits.forEach(fruit => console.log(fruit));
 
-let numbers = [1, 3, 5, 7, 9, 10];
-let hasEvenNumber = numbers.every(num => num % 2 === 0); 
-console.log(hasEvenNumber); // true
+// let numbers = [1, 3, 5, 7, 9, 10];
+// let hasEvenNumber = numbers.every(num => num % 2 === 0); 
+// console.log(hasEvenNumber); // true
  
  
  
