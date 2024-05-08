@@ -1,4 +1,4 @@
-const axios=require('axios');
+// const axios=require('axios');
 
 //Get
 // [axios.get('https://reqres.in/api/users?page=2')
@@ -22,13 +22,13 @@ const axios=require('axios');
 // .catch((err)=>console.log(err));
 
 //PUT
-axios.put('https://reqres.in/api/users/3',[{
+// axios.put('https://reqres.in/api/users/3',[{
 
-name:'chuks',
-job:'Developer',
-},])
-.then((res)=>console.log(res))
-.catch((err)=>console.log(err));
+// name:'chuks',
+// job:'Developer',
+// },])
+// .then((res)=>console.log(res))
+// .catch((err)=>console.log(err));
 
 
 
@@ -94,3 +94,34 @@ job:'Developer',
  
  
  // [1, 4, 9]
+
+
+//  const textToSpeak="chuks";
+// const utterance=new SpeechSynthesisUtterance(textToSpeak);
+// window.speechSynthesis.speak(utterance);
+
+
+
+const axios = require('axios');
+
+const options = {
+  method: 'GET',
+  url: 'https://mashape-community-urban-dictionary.p.rapidapi.com/define',
+  params: {term: 'cash'},
+  headers: {
+    'X-RapidAPI-Key': '725fb5b942msh802001ec5ca8863p134943jsnec754daad71f',
+    'X-RapidAPI-Host': 'mashape-community-urban-dictionary.p.rapidapi.com'
+  }
+};
+
+async function fetchData() {
+  try {
+    const response = await axios.request(options);
+    console.log(response.data);
+    console.log(response.data.definition)
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+fetchData();
